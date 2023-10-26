@@ -1,0 +1,4 @@
+{
+    "PORT" : 7000,
+    "DB_URI": "mongodb+srv://musaib:musaib@cluster.lesnedu.mongodb.net/Hospital"
+}
