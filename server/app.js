@@ -4,11 +4,12 @@ import config from "config"
 import "../server/utils/dbConnect.js"
 //Import of admin
 import Adminrouter from "./controllers/admins/index.js";
+import doctorRouter from "./controllers/doctors/index.js"
 
 //App create
 const app = express();
 
-const PORT = 7000;
+const PORT = 4000;
 
 
 app.use(express.json());
@@ -18,6 +19,7 @@ app.get("/", (res, req) => {
 })
 
 app.use("/admin", Adminrouter)
+app.use("/doctor", doctorRouter)
 
 app.use((req, res) => {
     res.status(500).json({msg:"Route Error. Please check the Route"})
