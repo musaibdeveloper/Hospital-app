@@ -10,7 +10,7 @@ Adminrouter.post("/register", async (req, res) => {
         await adminModel.create(adminData);
         res.status(200).json({ msg: "Admin Register Successfully" })
     } catch (error) {
-        res.status(500).json({ msg: "Internal Server error" })
+        res.status(500).json({error})
     }
 })
 
